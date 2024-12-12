@@ -1,0 +1,34 @@
+.iconbutton {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 10px;
+}
+
+.iconbutton-closed {
+    width: 60px;
+    justify-content: center;
+
+}
+
+.iconbutton-opened {
+    align-self: stretch;
+
+}
+
+
+div.iconbutton:hover {
+    background-color: var(--hover-color);
+}
+
+
+.selected {
+    background-color: var(--select-color);
+}
+
+div.iconbutton.selected:hover {
+    background-color: var(--select-color-hover);
+
+}

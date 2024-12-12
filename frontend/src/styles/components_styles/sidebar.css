@@ -1,0 +1,20 @@
+.sidebar{
+    display: flex;
+    padding: 165px 15px 20px 15px;
+    flex-direction: column;
+    gap: 15px;
+    flex-shrink: 0;
+    align-self: stretch;
+    height: 100%;
+
+    background-color: var(--background-2);
+}
+
+.sidebar-closed{
+    max-width: 90px;
+    align-items: center;
+}
+
+.open{
+    width: 323px;
+}
