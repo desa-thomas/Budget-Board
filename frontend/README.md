@@ -1,4 +1,4 @@
-### Front End Roadmap
+# Front End Roadmap
 
 - [ ] Port figma designs to the front end
     - [X] Add Icon buttons
