@@ -1,6 +1,6 @@
 .iconbutton {
     display: flex;
-    height: 60px;
+    height: 50px;
     align-items: center;
     gap: 10px;
 
@@ -8,7 +8,7 @@
 }
 
 .iconbutton-closed {
-    width: 60px;
+    width: 50px;
     justify-content: center;
 
 }
@@ -31,4 +31,9 @@ div.iconbutton:hover {
 div.iconbutton.selected:hover {
     background-color: var(--select-color-hover);
 
+}
+
+.banner-icon{
+    height: 40px;
+    width: 40px;
 }

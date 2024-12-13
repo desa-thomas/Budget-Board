@@ -1,0 +1,37 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.dashboard-heading {
+    display: flex;
+    padding: 5px 30px;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.mainplotsection {
+    display: flex;
+    padding: 15px 37px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+
+}
+
+.plot-border {
+    /* Remove once plots are added */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid blue;
+    flex-grow: 1;
+    align-self: stretch;
+}

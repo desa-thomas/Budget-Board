@@ -1,6 +1,6 @@
 # Front End Roadmap
 
-- [ ] Port figma designs to the front end
+- [ ] Port figma designs to the react front end
     - [X] Add Icon buttons
     - [X] Add side bar
     - [ ] Create content area

@@ -1,6 +1,6 @@
 :root {
   --background: #0B0809;
-  --background-2: rgba(63, 63, 63, 0.60);
+  --background-2: rgba(63, 63, 63, 0.30);
 
   --hover-color: rgba(217, 217, 217, 0.08);
   --select-color: rgba(98, 106, 255, 0.63);
@@ -20,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
   margin: 0;
   padding: 0;
 }
@@ -30,7 +31,10 @@ code {
 }
 
 h1 {
-  color: blue;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 h3 {
