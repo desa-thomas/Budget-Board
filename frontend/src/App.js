@@ -1,16 +1,21 @@
+import { useReducer } from "react";
+
 //Import components
-import SideBar from './Components/SideBar';
-import ContentArea from './Components/ContentArea';
+import Sidebar from "./Components/Sidebar";
+import ContentArea from "./Components/ContentArea";
 
 //Import Context
-import { SidebarContext, SidebarDispatchConte} from './SidebarContext';
-
+import { SidebarContextProvider } from "./SidebarContext";
 
 function App() {
+
   return (
-    <div className = "frame">
-      <SideBar/>
-      <ContentArea/>
+    <div className="frame">
+      {/* Provide a context with the current sidebar's state (open, close) and what dashboard is selected */}
+      <SidebarContextProvider>
+        <Sidebar/>
+        <ContentArea />
+      </SidebarContextProvider>
     </div>
   );
 }

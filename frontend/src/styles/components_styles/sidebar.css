@@ -3,21 +3,20 @@
     padding: 165px 15px 20px 14px;
     flex-direction: column;
     gap: 10px;
-    flex-shrink: 0;
+    flex: 1 0 0 ; 
     align-self: stretch;
 
     background-color: var(--background-2);
-    border: 1px solid var(--hover-color)
+    border: 1px solid var(--hover-color);
 
+    transition: var(--transition-animation); 
+    max-width: 80px;
 }
 
-.sidebar-closed{
-    align-items: center;
+.sidebar.sidebar-closed{
+    max-width: 50px;
 }
 
-.sidebar-open{
-    width: 323px;
-}
-.open{
-    width: 323px;
+.sidebar.sidebar-open{
+    max-width: 250px
 }

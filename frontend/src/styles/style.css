@@ -4,7 +4,9 @@
 
   --hover-color: rgba(217, 217, 217, 0.08);
   --select-color: rgba(98, 106, 255, 0.63);
-  --select-color-hover: rgba(98, 106, 255, 0.50)
+  --select-color-hover: rgba(98, 106, 255, 0.50);
+
+  --transition-animation: all 0.2s ease-in-out;
 }
 
 .frame {
@@ -46,7 +48,7 @@ h3 {
 
 p {
   /* p1 */
-  font-size: 1.375rem;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
