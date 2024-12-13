@@ -7,7 +7,7 @@ import sidebar_open_svg from '../svg/sidebar_open.svg'
 import sidebar_closed_svg from '../svg/sidebar_closed.svg'
 import dots from '../svg/dots.svg'
 
-import { useSiderbarContext } from '../SidebarContext'
+import { useSiderbarContext } from '../Contexts/SidebarContext'
 
 export default function ContentArea(){
 

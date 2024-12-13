@@ -1,6 +1,6 @@
 import "../styles/components_styles/iconbutton.css"
 
-import { useSiderbarContext, useSidebarDispatchContext } from "../SidebarContext"
+import { useSiderbarContext, useSidebarDispatchContext } from "../Contexts/SidebarContext"
 
 export default function  IconButton({svg, text, banner, dash_no }){
     

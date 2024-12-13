@@ -5,7 +5,7 @@ import Sidebar from "./Components/Sidebar";
 import ContentArea from "./Components/ContentArea";
 
 //Import Context
-import { SidebarContextProvider } from "./SidebarContext";
+import { SidebarContextProvider } from "./Contexts/SidebarContext";
 
 function App() {
 

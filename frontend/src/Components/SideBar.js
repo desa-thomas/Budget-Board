@@ -2,7 +2,7 @@
 import '../styles/components_styles/sidebar.css'
 
 import { useContext } from 'react';
-import { SidebarContext } from '../SidebarContext';
+import { SidebarContext } from '../Contexts/SidebarContext';
 //Components
 import IconButton from "./IconButton";
 //svgs
