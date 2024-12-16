@@ -14,6 +14,11 @@ function createWindow() {
       },
     });
     
+    //reload app on window resize to rerender graphs and prevent the graphs from overflowing
+    mainWindow.on("resize", function(){
+      mainWindow.reload()
+    })
+
     console.log(isDev)
     const startURL = isDev
       ? 'http://localhost:3000'
