@@ -1,6 +1,6 @@
 .sidebar{
     display: flex;
-    padding: 140px 15px 20px 14px;
+    padding: 120px 15px 20px 14px;
     flex-direction: column;
     gap: 10px;
     flex: 1 0 0 ; 
@@ -18,5 +18,5 @@
 }
 
 .sidebar.sidebar-open{
-    max-width: 250px
+    max-width: 200px
 }
