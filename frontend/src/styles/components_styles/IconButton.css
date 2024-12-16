@@ -58,3 +58,7 @@ div.iconbutton.selected:hover {
 .text-div.hidden{
     display: none;
 }
+
+.icon-text{
+    margin-top: 25px;
+}
