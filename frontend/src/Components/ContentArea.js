@@ -11,23 +11,27 @@ import sidebar_closed_svg from '../svg/sidebar_closed.svg'
 import dots from '../svg/dots.svg'
 
 //context
-import { useSiderbarContext } from '../Contexts/SidebarContext'
+import { useSiderbarContext, useSidebarDispatchContext } from '../Contexts/SidebarContext'
 
 
 export default function ContentArea(){
+    const sidebarState = useSiderbarContext()
+    const sidebarDispatch = useSidebarDispatchContext()
 
     return (
-        <div className='contentarea'>
-            <Banner/>
+        <div className='contentarea' onClick={()=>{
+            if (sidebarState.open){
+                sidebarDispatch({type: 'toggle-sidebar'})
+            }
+        }}>
+            <Banner sidebarState={sidebarState}/>
             <Dashboard/>
         </div>
     )
 }
 
 
-function Banner(){
-
-    const sidebarState = useSiderbarContext()
+function Banner( {sidebarState} ){
 
     return <div className='banner'>
         <IconButton

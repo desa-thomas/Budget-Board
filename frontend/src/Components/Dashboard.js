@@ -140,7 +140,7 @@ function CustomToolTip({ active, payload, label }) {
     // loop over the amount of stacked lines there are to create info for each
     for (let i = 0; i < payload.length; i++) {
       values.push(
-        <p className="values" style={{ color: payload[i].stroke }}>
+        <p className="values" style={{ color: payload[i].stroke}} key={i}>
           {payload[i].name}: <span>{payload[i].value}</span>
         </p>
       );

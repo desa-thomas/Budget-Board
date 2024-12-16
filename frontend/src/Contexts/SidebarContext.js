@@ -37,11 +37,17 @@ export function useSidebarDispatchContext() {
 
 /*
 Reducer for sidebar state
+
+for toggling sidebar use:
+  action = {type: 'toggle-sidebar'}
+
+for selecting an icon use:
+  action = {type: 'dash-icon', dash_no: 'the icon's number'}
 */
 export function sidebarReducer(state, action) {
   /*state : {open : boolean, dash_no : int} [0,1,2,3,4]*/
-  let updated_state;
   switch (action.type) {
+    // If side bar is toggled
     case "toggle-sidebar": {
       return {
         open: !state.open,
@@ -49,6 +55,7 @@ export function sidebarReducer(state, action) {
       };
     }
     case "dash-icon": {
+      // If dash-icon (icon on the sidebar) is clicked
       return {
         open: state.open,
         dash_no: action.dash_no,

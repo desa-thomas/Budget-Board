@@ -2,6 +2,12 @@ import "../styles/components_styles/iconbutton.css"
 
 import { useSiderbarContext, useSidebarDispatchContext } from "../Contexts/SidebarContext"
 
+/*
+NOTE: I don't know why I named it dash_no, but I don't feel like refactoring all 
+the references, but dash_no is just the number given to the icon button.
+
+The two icons on the banner are 0 and 1, then the ones on the side bar are all > 1
+*/
 export default function  IconButton({svg, text, banner, dash_no }){
     
     // Get sidebar state and dispatch function from context
@@ -16,7 +22,7 @@ export default function  IconButton({svg, text, banner, dash_no }){
         //Add on open/close class based on whether the side bar is open or closed
         //change background color by adding selected class
         <div 
-        onClick={()=>{click(sidebarDispatch, dash_no)}}
+        onClick={()=>{click(sidebarDispatch, sidebarState, dash_no)}}
         
         // class name based on icon properties
         className={`iconbutton ${open ? 'iconbutton-opened' : 'iconbutton-closed'} ${selected  ? 'selected': ''} ${banner? 'banner-icon': ''}`}>
@@ -33,7 +39,7 @@ export default function  IconButton({svg, text, banner, dash_no }){
     )
 } 
 
-function click(sidebarDispatch, dash_no){
+function click(sidebarDispatch, sidebarState, dash_no){
     //Sidebar icons
 
     if (dash_no > 1){
@@ -42,8 +48,9 @@ function click(sidebarDispatch, dash_no){
             dash_no: dash_no
         })
     }
-
-    else if (dash_no==0){
+    //Only dispatch if sidebar is closed. This is to avoid a double dispatch from clicking the context area
+    else if (dash_no==0 && !sidebarState.open){
+        console.log('clicked')
         sidebarDispatch({
             type: 'toggle-sidebar'
         })
