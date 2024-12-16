@@ -9,13 +9,18 @@ function createWindow() {
       autoHideMenuBar: true, 
       width: 1400,
       height: 800,
+      minWidth: 800,
+      minHeight: 600,
       webPreferences: {
         nodeIntegration: true,
       },
     });
     
-    //reload app on window resize to rerender graphs and prevent the graphs from overflowing
-    mainWindow.on("resize", function(){
+    //reload app when window gets resized and when app is unmaximized to rerender graphs and prevent overflowing
+    mainWindow.on("resized", function(){
+      mainWindow.reload()
+    })
+    mainWindow.on("unmaximize", function(){
       mainWindow.reload()
     })
 
