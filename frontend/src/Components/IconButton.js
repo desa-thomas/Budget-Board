@@ -26,7 +26,7 @@ export default function  IconButton({svg, text, banner, dash_no }){
             {/* Hide text is side bar is closed */}
 
             <div className={`text-div ${!open ? 'hidden' : ''}`}>
-                <p>{text}</p>
+                <p className="icon-text">{text}</p>
             </div>
 
         </div>
