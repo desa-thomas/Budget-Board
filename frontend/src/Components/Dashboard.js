@@ -89,41 +89,46 @@ function TestGraph() {
   return (
     <div className="plot-container">
       <h2 className="plot-title">Plot Title</h2>
-      <div className="plot-wrapper">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 0,
-              right: 0,
-              left: 0,
-              bottom: 0,
-            }}
-          >
-            <XAxis dataKey="name" stroke="white" strokeOpacity={0.5} dy={5} />
-            <YAxis stroke="white" strokeOpacity={0.5} />
-            <Tooltip content={<CustomToolTip />} />
-            <Legend verticalAlign="top" />
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 0,
+            right: 0,
+            left: 0,
+            bottom: 0,
+          }}
+        >
+          <XAxis dataKey="name" stroke="white" strokeOpacity={0.5} dy={5} />
+          <YAxis stroke="white" strokeOpacity={0.5} />
+          <Tooltip content={<CustomToolTip />} />
+          <Legend verticalAlign="top" />
 
-            <Line
-              type="linear"
-              dataKey="pv"
-              stroke="#8884d8"
-              activeDot={{ stroke: "black", strokeWidth: 1, r: 5 }}
-              dot={false}
-            />
-            <Line
-              type="monotone"
-              dataKey="uv"
-              stroke="#82ca9d"
-              activeDot={{ stroke: "black", strokeWidth: 1, r: 5 }}
-              dot={false}
-            />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+          <Line
+            type="linear"
+            dataKey="pv"
+            stroke="#8884d8"
+            activeDot={{ stroke: "black", strokeWidth: 1, r: 5 }}
+            dot={false}
+          />
+          <Line
+            type="monotone"
+            dataKey="uv"
+            stroke="#82ca9d"
+            activeDot={{ stroke: "black", strokeWidth: 1, r: 5 }}
+            dot={false}
+          />
+          <Line
+            type="natural"
+            dataKey="amt"
+            stroke="#d188ba"
+            activeDot={{ stroke: "black", strokeWidth: 1, r: 5 }}
+            dot={false}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 }
