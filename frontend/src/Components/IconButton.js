@@ -16,7 +16,7 @@ export default function  IconButton({svg, text, banner, dash_no }){
 
     const open = (sidebarState.open & dash_no > 1) //Banner icons cannot be open i.e., dash_no < 1
 
-    const selected = (dash_no == sidebarState.dash_no & dash_no > 1) //banner icons logic are not handled here
+    const selected = (dash_no === sidebarState.dash_no & dash_no > 1) //banner icons logic are not handled here
 
     return(
         //Add on open/close class based on whether the side bar is open or closed
@@ -49,7 +49,7 @@ function click(sidebarDispatch, sidebarState, dash_no){
         })
     }
     //Only dispatch if sidebar is closed. This is to avoid a double dispatch from clicking the context area
-    else if (dash_no==0 && !sidebarState.open){
+    else if (dash_no===0 && !sidebarState.open){
         console.log('clicked')
         sidebarDispatch({
             type: 'toggle-sidebar'
