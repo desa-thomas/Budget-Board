@@ -1,8 +1,8 @@
+/* Dashboard container styles */
 .dashboard {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
     flex: 1 0 0;
     align-self: stretch;
 }
@@ -16,22 +16,83 @@
     align-self: stretch;
 }
 
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+
+    flex: 1 0 0;
+    gap: 10px;
+}
+
+/* Plot styles */
 .mainplotsection {
     display: flex;
+    flex-direction: row;
     padding: 15px 37px;
     align-items: flex-start;
     gap: 10px;
     flex: 1 0 0;
     align-self: stretch;
-
 }
 
-.plot-border {
-    /* Remove once plots are added */
+.plot-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid blue;
-    flex-grow: 1;
+    flex: 1 0 0;
     align-self: stretch;
+}
+.plot-container{
+    display: flex;
+    flex-direction: column;
+
+    /* fill its own container */
+    flex: 1 0 0;    
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 10px 10px 0px;
+
+    background-color: var(--background-2);
+    border-radius: 10px;    
+}
+
+.plot-title{
+    margin: 0px 0px 0px 0px;
+    padding-left: 15px;
+    padding-top: 10px;
+
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* Tool tip styles */
+
+.custom-tooltip{
+    display: flex;
+    width: 100px;
+    max-height: 100px;
+
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 10px; 
+    border-radius: 10px;
+    margin:0;
+
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.label{
+    font-size: 18px;
+    margin:0;
+    font-weight: 600;
+}
+
+.values{
+    margin: 0;
+    font-size: 14px;
+}
+
+span{
+    color: white;
 }
