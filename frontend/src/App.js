@@ -1,5 +1,3 @@
-import { useReducer } from "react";
-
 //Import components
 import Sidebar from "./Components/Sidebar";
 import ContentArea from "./Components/ContentArea";
