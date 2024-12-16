@@ -1,13 +1,18 @@
+//styles
 import '../styles/components_styles/contentarea.css'
 
+//Components
 import IconButton from './IconButton'
 import Dashboard from './Dashboard'
 
+// SVGs
 import sidebar_open_svg from '../svg/sidebar_open.svg'
 import sidebar_closed_svg from '../svg/sidebar_closed.svg'
 import dots from '../svg/dots.svg'
 
+//context
 import { useSiderbarContext } from '../Contexts/SidebarContext'
+
 
 export default function ContentArea(){
 
