@@ -1,6 +1,6 @@
 .sidebar{
     display: flex;
-    padding: 120px 15px 20px 14px;
+    padding: 35px 15px 20px 14px;
     flex-direction: column;
     gap: 10px;
     flex: 1 0 0 ; 
@@ -18,5 +18,34 @@
 }
 
 .sidebar.sidebar-open{
-    max-width: 200px
+    max-width: 225px
 }
+
+.availableBalance-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    align-self: stretch;
+    padding: 10px 13px 14px 13px;
+    gap: 5px; 
+}
+
+.ab-closed{
+    visibility: hidden;
+}
+
+.ab-open{
+    visibility: visible;
+}
+
+.ab-header{
+    font-size: 20px;
+    margin: 0px; 
+    /* prevent from wrapping when side bar comes out */
+    white-space: nowrap;
+}
+
+.balance{
+    color: #98ebb8; 
+}
+

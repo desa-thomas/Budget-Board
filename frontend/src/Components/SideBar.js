@@ -17,6 +17,8 @@ export default function Sidebar(){
     const open = sidebarState.open
 
     return(<div className={`sidebar sidebar-${open ? 'open' : 'closed'}`}>
+        <AvailableBalance sidebarState={sidebarState}/>
+
         <IconButton
             svg = {piechart_svg}
             text='Home'
@@ -39,4 +41,15 @@ export default function Sidebar(){
             dash_no={5}/>
             
     </div>)
+}
+
+
+function AvailableBalance({ sidebarState }){
+
+    return(
+        <div className={`availableBalance-container ${!sidebarState.open ? 'ab-closed' : 'ab-open'}`}>
+            <h2 className='ab-header'>Available Balance</h2>
+            <h2 className='ab-header balance'>$12,000</h2>
+        </div>
+    )
 }
