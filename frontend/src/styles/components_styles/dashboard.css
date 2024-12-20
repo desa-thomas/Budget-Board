@@ -9,10 +9,11 @@
 
 .dashboard-heading {
     display: flex;
-    padding: 0px 30px;
+    flex-direction: row;
+    padding: 10px 20px 0px 20px;
     /* justify-content: center; */
     align-items: center;
-    gap: 10px;
+    gap: 25px;
     align-self: stretch;
 }
 
@@ -23,16 +24,45 @@
     align-items: flex-start;
 
     flex: 1 0 0;
-    gap: 10px;
+    gap: 15px;
+}
+.values-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    align-self: stretch;
+}
+.value-card {
+    flex: 1  0 0; 
+    padding: 10px 10px; 
+    background-color: var(--background-2);
+    border-radius: 10px;
+}
+
+.value-font {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.Income{
+    color: #ABFB97; 
+}
+.Spending{
+    color: #FB9797         ; 
+}
+.Savings{
+    color:#95B8E7;
 }
 
 /* Plot styles */
 .mainplotsection {
     display: flex;
     flex-direction: row;
-    padding: 15px 30px;
+    padding: 15px 20px;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
     flex: 1 0 0;
     align-self: stretch;
 }
@@ -42,12 +72,13 @@
     flex: 1 0 0;
     align-self: stretch;
 }
-.plot-container{
+
+.plot-container {
     display: flex;
     flex-direction: column;
 
     /* fill its own container */
-    flex: 1 0 0;    
+    flex: 1 0 0;
     align-self: stretch;
     align-items: flex-start;
     gap: 10px;
@@ -59,7 +90,7 @@
     overflow: hidden;
 }
 
-.plot-title{
+.plot-title {
     margin: 0px 0px 0px 0px;
     padding-left: 15px;
     padding-top: 10px;
@@ -70,31 +101,31 @@
 
 /* Tool tip styles */
 
-.custom-tooltip{
+.custom-tooltip {
     display: flex;
     width: 100px;
     max-height: 100px;
 
     flex-direction: column;
     gap: 5px;
-    padding: 10px 10px; 
+    padding: 10px 10px;
     border-radius: 10px;
-    margin:0;
+    margin: 0;
 
     background-color: rgba(0, 0, 0, 0.3)
 }
 
-.label{
+.label {
     font-size: 18px;
-    margin:0;
+    margin: 0;
     font-weight: 600;
 }
 
-.values{
+.tooltip-value {
     margin: 0;
     font-size: 14px;
 }
 
-span{
+span {
     color: white;
 }

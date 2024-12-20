@@ -1,5 +1,6 @@
 import "../styles/components_styles/dashboard.css";
 
+import Dropdown from "./Dropdown";
 //Chart component imports
 import {
   LineChart,
@@ -16,6 +17,8 @@ export default function Dashboard() {
     <div className="dashboard">
       <div className="dashboard-heading">
         <h1>Dashboard</h1>
+        <Dropdown name="Year" />
+        <Dropdown name="Month" />
       </div>
 
       <MainPlotSection />
@@ -27,13 +30,28 @@ function MainPlotSection() {
   return (
     <div className="mainplotsection">
       <div className="dashboard-container">
-        <TestGraph />
+        <div className="values-container">
+          <ValueCard name={'Income'} value={'$4,000'}/>
+          <ValueCard name='Spending' value = '$2,000'/>
+          <ValueCard name = 'Savings' value = '$1,000'/>
+        </div>
 
+        <TestGraph />
         <TestGraph />
       </div>
       <div className="dashboard-container">
         <TestGraph />
       </div>
+    </div>
+  );
+}
+
+// Cards for income, spending, savings values
+function ValueCard({ name, value }) {
+  return (
+    <div className="value-card">
+      <h2 className={`value-font`}>{name}</h2>
+      <h2 className={`value-font ${name}`}>{value}</h2>
     </div>
   );
 }
@@ -139,7 +157,7 @@ function CustomToolTip({ active, payload, label }) {
     // loop over the amount of stacked lines there are to create info for each
     for (let i = 0; i < payload.length; i++) {
       values.push(
-        <p className="values" style={{ color: payload[i].stroke}} key={i}>
+        <p className="tooltip-value" style={{ color: payload[i].stroke }} key={i}>
           {payload[i].name}: <span>{payload[i].value}</span>
         </p>
       );
