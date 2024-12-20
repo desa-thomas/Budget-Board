@@ -1,4 +1,4 @@
-import "../styles/components_styles/iconbutton.css"
+ import "../styles/components_styles/iconbutton.css"
 
 import { useSiderbarContext, useSidebarDispatchContext } from "../Contexts/SidebarContext"
 

@@ -67,4 +67,4 @@ export function sidebarReducer(state, action) {
   }
 }
 
-export const initialSidebarState = { open: false, dash_no: 2 };
+export const initialSidebarState = { open: true, dash_no: 2 };

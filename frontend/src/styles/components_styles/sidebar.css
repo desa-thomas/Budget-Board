@@ -18,7 +18,7 @@
 }
 
 .sidebar.sidebar-open{
-    max-width: 225px
+    max-width: 200px
 }
 
 .availableBalance-container{
@@ -46,6 +46,6 @@
 }
 
 .balance{
-    color: #98ebb8; 
+    color: #ABFB97; 
 }
 
