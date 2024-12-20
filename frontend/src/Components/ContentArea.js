@@ -19,11 +19,8 @@ export default function ContentArea(){
     const sidebarDispatch = useSidebarDispatchContext()
 
     return (
-        <div className='contentarea' onClick={()=>{
-            if (sidebarState.open){
-                sidebarDispatch({type: 'toggle-sidebar'})
-            }
-        }}>
+        <div className='contentarea' 
+        >
             <Banner sidebarState={sidebarState}/>
             <Dashboard/>
         </div>
